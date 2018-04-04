@@ -28,6 +28,7 @@ cd nagios-plugins-*
 echo "Installing Libsll Package"
 apt-get install libssl-dev
 echo "Libssl Package installed"
+./configure --with-nagios-user=nagios --with-nagios-group=nagios
 make
 make install
 chown nagios:nagios /usr/local/nagios
