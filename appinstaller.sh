@@ -55,4 +55,3 @@ sed 's/127.0.0.1.*/127.0.0.1 '"$nagiosmonitorip"'/g' /etc/xinetd.d/nrpe.bak > /e
 echo "nrpe            5666/tcp                        # NRPE" >> /etc/services
 /etc/init.d/xinetd restart
 echo "I Hope It will be working"
-rm installer.sh
