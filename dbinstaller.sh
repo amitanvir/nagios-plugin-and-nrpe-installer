@@ -54,6 +54,6 @@ mv /etc/xinetd.d/nrpe /etc/xinetd.d/nrpe.bak
 sed 's/127.0.0.1.*/127.0.0.1 '"$nagiosmonitorip"'/g' /etc/xinetd.d/nrpe.bak > /etc/xinetd.d/nrpe
 echo "nrpe            5666/tcp                        # NRPE" >> /etc/services
 /etc/init.d/xinetd restart
-apt-get install libsys-statistics-linux-perl -y
+apt-get install libsys-statistics-linux-perl dmidecode -y
 echo "I Hope It will be working"
 #rm dbinstaller.sh
