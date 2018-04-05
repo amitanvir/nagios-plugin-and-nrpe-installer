@@ -56,4 +56,4 @@ echo "nrpe            5666/tcp                        # NRPE" >> /etc/services
 /etc/init.d/xinetd restart
 apt-get install libsys-statistics-linux-perl -y
 echo "I Hope It will be working"
-rm dbinstaller.sh
+#rm dbinstaller.sh
