@@ -40,7 +40,8 @@ echo "Xinetd Package installed"
 echo "---------------------------------------"
 echo "Installing Nagios Remote Plugin Executor {NRPE} Version-3.2.1"
 cd /tmp
-wget https://github.com/NagiosEnterprises/nrpe/releases/download/nrpe-3.2.1/nrpe-3.2.1.tar.gz
+#wget https://github.com/NagiosEnterprises/nrpe/releases/download/nrpe-3.2.1/nrpe-3.2.1.tar.gz
+wget https://github.com/amitanvir/nagios-plugin-and-nrpe-installer/raw/master/nrpe-2.12.tar.gz
 tar -xzvf nrpe-*.tar.gz
 cd nrpe-*
 ln -s /usr/lib/x86_64-linux-gnu/libssl.so /usr/lib/libssl.so
