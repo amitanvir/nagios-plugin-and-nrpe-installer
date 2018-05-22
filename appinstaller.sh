@@ -5,8 +5,8 @@
 ########################################################
 
 echo "Debian Packages are going for upgradation from repository list"
-apt-get update && apt-get upgrade
-apt-get install build-essential
+apt-get update && apt-get upgrade -y
+apt-get install build-essential -y
 echo "Packages are updated"
 echo "............"
 echo "GCC Version-"
@@ -26,7 +26,7 @@ wget https://nagios-plugins.org/download/nagios-plugins-2.2.1.tar.gz
 tar -xzvf nagios-plugins-*.tar.gz
 cd nagios-plugins-*
 echo "Installing Libsll Package"
-apt-get install libssl-dev
+apt-get install libssl-dev -y
 echo "Libssl Package installed"
 ./configure --with-nagios-user=nagios --with-nagios-group=nagios
 make
@@ -35,7 +35,7 @@ chown nagios:nagios /usr/local/nagios
 chown -R nagios:nagios /usr/local/nagios/libexec
 echo "Nagios Plugin Installation complete"
 echo "Installing Xinetd Package"
-apt-get install xinetd
+apt-get install xinetd -y
 echo "Xinetd Package installed"
 echo "---------------------------------------"
 echo "Installing Nagios Remote Plugin Executor {NRPE} Version-3.2.1"
