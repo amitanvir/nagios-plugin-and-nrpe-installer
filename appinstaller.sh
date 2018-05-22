@@ -43,6 +43,7 @@ cd /tmp
 wget https://github.com/NagiosEnterprises/nrpe/releases/download/nrpe-3.2.1/nrpe-3.2.1.tar.gz
 tar -xzvf nrpe-*.tar.gz
 cd nrpe-*
+ln -s /usr/lib/x86_64-linux-gnu/libssl.so /usr/lib/libssl.so
 ./configure
 make all
 make install-plugin
