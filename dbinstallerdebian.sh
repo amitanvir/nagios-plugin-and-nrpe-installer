@@ -1,6 +1,7 @@
 #!/bin/bash
 ########################################################
 ### This script is created by Tanvir Islam <knock@amitanvir.info>.
+### Automated Nagios Plugin & NRPE Installer for Debian
 ########################################################
 echo "Debian Packages are going for upgradation from repository list"
 apt-get update && apt-get upgrade
