@@ -4,7 +4,7 @@
 ### Automated Nagios Plugin & NRPE Installer for Debian
 ########################################################
 echo "Debian Packages are going for upgradation from repository list"
-apt-get update && apt-get upgrade
+apt-get update && apt-get upgrade -y
 apt-get install build-essential -y
 echo "Packages are updated"
 echo "............"
