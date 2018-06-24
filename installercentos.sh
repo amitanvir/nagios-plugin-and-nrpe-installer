@@ -37,7 +37,7 @@ wget https://github.com/NagiosEnterprises/nrpe/releases/download/nrpe-3.2.1/nrpe
 #wget https://github.com/amitanvir/nagios-plugin-and-nrpe-installer/raw/master/nrpe-2.12.tar.gz
 #wget https://github.com/NagiosEnterprises/nrpe/archive/nrpe-2-12.tar.gz
 tar -xzvf nrpe-*.tar.gz
-cd nrpe-nrpe-*
+cd nrpe*
 ln -s /usr/lib/x86_64-linux-gnu/libssl.so /usr/lib/libssl.so
 ./configure --enable-ssl
 make all
