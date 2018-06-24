@@ -1,9 +1,7 @@
 #!/bin/bash
-
 ########################################################
 ### This script is created by Tanvir Islam <knock@amitanvir.info>.
 ########################################################
-
 echo "Packages are going for upgradation from repository list"
 yum update -y
 yum install perl-Sys-Statistics-Linux dmidecode -y
