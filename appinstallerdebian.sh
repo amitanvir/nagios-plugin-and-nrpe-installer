@@ -23,8 +23,8 @@ echo "Installing Nagios Plugin Version-2.2.1"
 cd /tmp
 #wget https://www.nagios-plugins.org/download/nagios-plugins-1.5.tar.gz
 wget https://nagios-plugins.org/download/nagios-plugins-2.2.1.tar.gz
-tar -xzvf nagios-plugins-*.tar.gz
-cd nagios-plugins-*
+tar -xzvf nagios-plugins-*.tar.gz -C plugin_dir
+cd plugin_dir
 echo "Installing Libsll Package"
 apt-get install libssl-dev -y
 echo "Libssl Package installed"
@@ -42,8 +42,8 @@ echo "Installing Nagios Remote Plugin Executor {NRPE} Version-3.2.1"
 cd /tmp
 #wget https://github.com/NagiosEnterprises/nrpe/releases/download/nrpe-3.2.1/nrpe-3.2.1.tar.gz
 wget https://github.com/amitanvir/nagios-plugin-and-nrpe-installer/raw/master/nrpe-2.12.tar.gz
-tar -xzvf nrpe-*.tar.gz
-cd nrpe-*
+tar -xzvf nrpe-*.tar.gz -C nrpe_dir
+cd nrpe_dir
 ln -s /usr/lib/x86_64-linux-gnu/libssl.so /usr/lib/libssl.so
 ./configure
 make all
