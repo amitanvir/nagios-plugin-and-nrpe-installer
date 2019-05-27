@@ -17,7 +17,7 @@ echo "Adding Nagios user..."
 useradd nagios
 echo "Enter Nagios account password"
 passwd nagios
-echo "vbox user password is updated"
+echo "Nagios user password is updated"
 echo "---------------------------------------"
 echo "Installing Nagios Plugin Version-2.2.1"
 cd /tmp
