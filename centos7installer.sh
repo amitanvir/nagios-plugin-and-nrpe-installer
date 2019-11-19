@@ -36,7 +36,10 @@ echo "NRPE Package installed"
 echo "Installing NRPE Package"
 yum install perl-Sys-Statistics-Linux -y
 echo "NRPE Package installed"
+read -p "Enter Nagios Monitor Server IP Address: " nagiosmonitorip
+mv /etc/nagios/nrpe.cfg /etc/nagios/nrpe.cfg.bak
+sed sed 's/allowed_hosts=127.0.0.1,::1*/allowed_hosts=127.0.0.1,::1,'"$nagiosmonitorip"'/g' /etc/nagios/nrpe.cfg.bak > /etc/nagios/nrpe.cfg
 systemctl start nrpe
 systemctl enable nrpe
 firewall-cmd --permanent --add-service=nrpe
-firewall-cmd --add-service=nrp
+firewall-cmd --add-service=nrpe
