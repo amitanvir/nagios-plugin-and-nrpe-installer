@@ -1,0 +1,10 @@
+#!/bin/bash
+# Version 1.00
+# By Paul Basehore
+
+
+strversion=`cat /proc/version | awk '{print $3,$9,$10,$11}'`
+
+echo "Kernel Version -" ${strversion%')'}
+
+exit 0
