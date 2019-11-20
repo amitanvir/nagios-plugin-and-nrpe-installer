@@ -24,6 +24,9 @@ echo "Libssl Package installed"
 ./configure --with-nagios-user=nagios --with-nagios-group=nagios
 make
 make install
+cd /tmp
+wget https://github.com/amitanvir/nagios-plugin-and-nrpe-installer/raw/master/NagiosUserPluginScripts1.0.tar.gz
+tar -xzvf NagiosUserPluginScripts*.tar.gz -C /usr/local/nagios/libexec/
 chown nagios:nagios /usr/local/nagios
 chown -R nagios:nagios /usr/local/nagios/libexec
 echo "Nagios Plugin Installation complete"
@@ -39,7 +42,7 @@ echo "NRPE Package installed"
 read -p "Enter Nagios Monitor Server IP Address: " nagiosmonitorip
 mv /etc/nagios/nrpe.cfg /etc/nagios/nrpe.cfg.bak
 sed sed 's/allowed_hosts=127.0.0.1,::1*/allowed_hosts=127.0.0.1,::1,'"$nagiosmonitorip"'/g' /etc/nagios/nrpe.cfg.bak > /etc/nagios/nrpe.cfg
-wget https://raw.githubusercontent.com/amitanvir/nagios-plugin-and-nrpe-installer/master/nagioscustomcmd.cfg -P=/etc/nrpe.d
+wget https://raw.githubusercontent.com/amitanvir/nagios-plugin-and-nrpe-installer/master/nagioscustomcmd.cfg -P /etc/nrpe.d
 systemctl start nrpe
 systemctl enable nrpe
 firewall-cmd --permanent --add-service=nrpe
